@@ -13,38 +13,38 @@
 		base_layer_mac {
 // Base layer with gui at backspace position
 // ------------------------------------------------------------------------------------------
-// | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  | "|" |  ~ |
-// |RALT/TAB| Q |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   BKSP  |
-// | LGUI  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |none|  ENTER  |
+// | ~ |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  | BKSP | FN  |
+// |RALT/TAB| Q |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   |
+// | LCTL  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |none|  ENTER  |
 // | SHIFT |none| Z |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |    Shift   | FN |
-// |  LCTL  |  LWIN  |  LALT  |  RALT  | FN |     SPACE     |  RALT |  RWIN | RMENU | RCTRL |
+// |  LCTL  |  LALT  |  LWIN  |  BKSP | ESC |     SPACE     |  RWIN |  RALT | RCTRL | RMENU |
 // | Rotary | (<-- Rotary switch) ----------------------------------------------------------- 
 			bindings = <
-	&gresc		 &kp NUM_1 	&kp NUM_2	&kp NUM_3 	&kp NUM_4 &kp NUM_5 &kp NUM_6 	&kp NUM_7 	&kp NUM_8 &kp NUM_9	&kp NUM_0	&kp MINUS	&kp EQL  	&kp BSLH	&kp GRAV
-	&mt RALT TAB &kp   Q   	&kp   W   	&kp   E   	&kp   R   &kp   T   &kp   Y   	&kp   U   	&kp   I   &kp   O   &kp   P   	&kp LBKT 	&kp RBKT	&kp BKSP
-	&kp LGUI 	 &kp   A   	&kp   S   	&kp   D   	&kp   F   &kp   G   &kp   H   	&kp   J   	&kp   K   &kp   L   &kp  SCLN  	&kp  QUOT   &none		&kp RET
-	&kp LSFT 	 &none		&kp   Z   	&kp   X   	&kp   C   &kp   V   &kp   B   	&kp   N   	&kp   M   &kp  CMMA &kp  DOT  	&kp  FSLH	&kp RSFT 	&mo FN1
-	&kp LCTL 	 &kp LGUI   &kp LALT				&kp RALT			&mo FN1		&kp  SPC  	&kp  RALT			&kp  RGUI 	&kp K_APP	&kp  RCTL	
+	&kp GRAV	 &kp NUM_1 	&kp NUM_2	&kp NUM_3 	&kp NUM_4 &kp NUM_5 &kp NUM_6 	&kp NUM_7 	&kp NUM_8 &kp NUM_9	&kp NUM_0	&kp MINUS	&kp EQL		&kp BKSP	&mo FN1	
+	&mt RALT TAB &kp   Q   	&kp   W   	&kp   E   	&kp   R   &kp   T   &kp   Y   	&kp   U   	&kp   I   &kp   O   &kp   P   	&kp LBKT 	&kp RBKT	&kp BSLH
+	&kp LCTL 	 &kp   A   	&kp   S   	&kp   D   	&kp   F   &kp   G   &kp   H   	&kp   J   	&kp   K   &kp   L   &kp  SCLN  	&kp  QUOT   &none		&kp RET
+	&kp LSFT 	 &none		&kp   Z   	&kp   X   	&kp   C   &kp   V   &kp   B   	&kp   N   	&kp   M   &kp  CMMA &kp  DOT  	&kp  FSLH	&kp RSFT 	&none
+	&kp LCTL 	 &kp LALT   &kp LGUI				&kp BKSP			&gresc		&kp  SPC  	&kp  RGUI			&kp  RALT 	&kp RCTL	&kp  K_APP	
 	&kp C_PP	
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
 		};
 		base_layer_win {
-// Base layer with ctrl at backspace position
+// Base layer with gui at backspace position
 // ------------------------------------------------------------------------------------------
-// | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  | "|" |  ~ |
-// |RALT/TAB| Q |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   BKSP  |
+// | ~ |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  | BKSP | FN  |
+// |RALT/TAB| Q |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   |
 // | LCTL  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |none|  ENTER  |
 // | SHIFT |none| Z |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |    Shift   | FN |
-// |  LCTL  |  LWIN  |  LALT  |  RALT  | FN |     SPACE     |  RALT |  RWIN | RMENU | RCTRL |
+// |  LCTL  |  LALT  |  LWIN  |  BKSP | ESC |     SPACE     |  RWIN |  RALT | RCTRL | RMENU |
 // | Rotary | (<-- Rotary switch) ----------------------------------------------------------- 
-				bindings = <
-	&gresc		 &kp NUM_1 	&kp NUM_2	&kp NUM_3 	&kp NUM_4 &kp NUM_5 &kp NUM_6 	&kp NUM_7 	&kp NUM_8 &kp NUM_9	&kp NUM_0	&kp MINUS	&kp EQL  	&kp BSLH	&kp GRAV
-	&mt RALT TAB &kp   Q   	&kp   W   	&kp   E   	&kp   R   &kp   T   &kp   Y   	&kp   U   	&kp   I   &kp   O   &kp   P   	&kp LBKT 	&kp RBKT	&kp BKSP
+			bindings = <
+	&kp GRAV	 &kp NUM_1 	&kp NUM_2	&kp NUM_3 	&kp NUM_4 &kp NUM_5 &kp NUM_6 	&kp NUM_7 	&kp NUM_8 &kp NUM_9	&kp NUM_0	&kp MINUS	&kp EQL		&kp BKSP	&mo FN1	
+	&mt RALT TAB &kp   Q   	&kp   W   	&kp   E   	&kp   R   &kp   T   &kp   Y   	&kp   U   	&kp   I   &kp   O   &kp   P   	&kp LBKT 	&kp RBKT	&kp BSLH
 	&kp LCTL 	 &kp   A   	&kp   S   	&kp   D   	&kp   F   &kp   G   &kp   H   	&kp   J   	&kp   K   &kp   L   &kp  SCLN  	&kp  QUOT   &none		&kp RET
-	&kp LSFT 	 &none		&kp   Z   	&kp   X   	&kp   C   &kp   V   &kp   B   	&kp   N   	&kp   M   &kp  CMMA &kp  DOT  	&kp  FSLH	&kp RSFT 	&mo FN1
-	&kp LCTL 	 &kp LGUI   &kp   LALT				&kp RALT			&mo FN1		&kp  SPC  	&kp  RALT			&kp  RGUI 	&kp K_APP	&kp  RCTL		
-	&kp C_PP
+	&kp LSFT 	 &none		&kp   Z   	&kp   X   	&kp   C   &kp   V   &kp   B   	&kp   N   	&kp   M   &kp  CMMA &kp  DOT  	&kp  FSLH	&kp RSFT 	&none
+	&kp LCTL 	 &kp LALT   &kp LGUI				&kp BKSP			&gresc		&kp  SPC  	&kp  RGUI			&kp  RALT 	&kp RCTL	&kp  K_APP	
+	&kp C_PP	
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
 		};
