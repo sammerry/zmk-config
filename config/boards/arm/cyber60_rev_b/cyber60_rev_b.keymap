@@ -59,11 +59,11 @@
 // |  LCTL  |  NONE  |  LALT  | SPACE  | FN |     SPACE     |  RALT |  RWIN | RMENU | RCTRL |
 // | Rotary | (<-- Rotary switch) -----------------------------------------------------------
 				bindings = <
-	&kp ESC		 &kp NUM_1 	&kp NUM_2	&kp NUM_3 	&kp NUM_4 &kp NUM_5 &kp NUM_6 	&kp NUM_7 	&kp NUM_8 &kp NUM_9	&kp NUM_0	&kp MINUS	&kp EQL  	&kp BSLH	&kp GRAV
-	&kp TAB 	 &kp   Q   	&kp   W   	&kp   E   	&kp   R   &kp   T   &kp   Y   	&kp   U   	&kp   I   &kp   O   &kp   P   	&kp LBKT 	&kp RBKT	&kp BKSP
-	&kp LCTL 	 &kp   A   	&kp   S   	&kp   D   	&kp   F   &kp   G   &kp   H   	&kp   J   	&kp   K   &kp   L   &kp  SCLN  	&kp  QUOT   &none		&kp RET
-	&kp LSFT 	 &none		&kp   Z   	&kp   X   	&kp   C   &kp   V   &kp   B   	&kp   N   	&kp   M   &kp  CMMA &kp  DOT  	&kp  FSLH	&kp RSFT 	&mo FN1
-	&kp LCTL 	 &none   	&kp   LALT				&kp SPC		&mo FN1		&kp  SPC  	&kp  RALT			&kp  RGUI 	&kp K_APP	&kp  RCTL
+	&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+	&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp BKSP
+	&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+	&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+	&trans &trans &trans &kp SPC &trans &trans &trans &trans &trans &trans
 	&kp C_PP
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -78,11 +78,11 @@
 // |   NON  |  NON   |  NON   |   NON  | NON |    NON       |  NON  |  NON  |  NON  |  NON  |
 // | Rotary | (<-- Rotary switch) -----------------------------------------------------------
 				bindings = <
-	&tog SETTINGS		&none 	&out OUT_USB			&out OUT_BLE  &none   &none 	&none 	&none 		&none	&none	&none			&none			&reset  			&bootloader			&none
-	&none 	&bt BT_CLR  &bt BT_SEL 0  	&bt BT_SEL 1   	&bt BT_SEL 2	&bt BT_SEL 3   	&bt BT_SEL 4   		&none	&none   &none			&none   		&none			&none			&none
-	&none	&tog 0   	&tog 1   		&tog 2   		&tog SETTINGS   &none   		&none   			&none   &none	&none   		&none			&none			&none   		&none
-	&none	&none		&rgb_ug RGB_TOG &rgb_ug RGB_BRD	&rgb_ug RGB_BRI &rgb_ug RGB_EFR &rgb_ug  RGB_EFF	&rgb_ug RGB_HUD	&rgb_ug RGB_HUI	&rgb_ug RGB_SAD	&rgb_ug RGB_SAI	&rgb_ug RGB_SPD	&rgb_ug RGB_SPI	&rgb_ug RGB_COLOR_HSB(128,100,100)
-	&none	&none    	&none							&none			&none			&none  			&none			&none 	&none	&none
+	&tog SETTINGS &rgb_ug RGB_TOG &rgb_ug RGB_BRD	&rgb_ug RGB_BRI &rgb_ug RGB_EFR &rgb_ug  RGB_EFF	&rgb_ug RGB_HUD	&rgb_ug RGB_HUI	&rgb_ug RGB_SAD	&rgb_ug RGB_SAI	&rgb_ug RGB_SPD	&rgb_ug RGB_SPI	&rgb_ug RGB_COLOR_HSB(128,100,100) &none
+	&tog 0 &bt BT_CLR &out OUT_USB &out OUT_BLE &none &none &none &none &none &none &none &none &none &none
+	&tog 1 &none &none &none &none &none &none &none &none &none &none &none &none &none
+	&tog 2 &none &none &none &none &none &none &none &none &none &none &none &none &none
+	&none &none &none &none &none &none &none &none &none &none
 	&none
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -97,11 +97,11 @@
 // |  LCTL  |  LGUI  |  LWIN  |  RALT  | FN |     SPACE     |  RALT |  RWIN | RMENU | RCTRL |
 // | Rotary | (<-- Rotary switch) -----------------------------------------------------------
 			bindings = <
-	&bt BT_SEL 0  &kp F1		&kp F2 	 		&kp F3			&kp F4			&kp F5			&kp F6			&kp F7			&kp F8			&kp F9			&kp F10		&kp F11		&kp F12			&none &none
+	&bt BT_SEL 0  &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &none &none
 	&bt BT_SEL 1  &none   &kp UP  &none		&none   &none  &trans			&trans			&trans			&trans			&kp SLCK	&kp UP		&kp C_AL_LOCK	&kp DEL
 	&bt BT_SEL 2  &kp LEFT   	&kp DOWN		&kp RIGHT		&kp K_MUTE		&out OUT_TOG			&kp KP_ASTERISK	&kp KP_SLASH	&kp HOME		&kp PG_UP		&kp LEFT	&kp RIGHT	&trans		&trans
-	&bt BT_SEL 3  &trans   	&kp C_PREV   	&kp C_PP	 	&kp C_NEXT 		&kp C_VOL_DN	&kp C_VOL_UP	&kp KP_PLUS		&kp KP_MINUS	&kp END			&kp PG_DN	&kp DOWN	&trans 		&trans
-	&bt BT_SEL 4  &trans   	&trans             				&trans			&trans			&trans  		&trans  		&trans			&trans			&tog SETTINGS
+	&bt BT_SEL 3  &trans &kp C_PREV &kp C_PP	 	&kp C_NEXT 		&kp C_VOL_DN	&kp C_VOL_UP	&kp KP_PLUS		&kp KP_MINUS	&kp END			&kp PG_DN	&kp DOWN	&trans 		&trans
+	&bt BT_SEL 4  &trans &trans &trans &trans &trans &trans &trans &trans &trans
 	&kp C_PP
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
